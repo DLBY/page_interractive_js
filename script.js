@@ -27,9 +27,14 @@ burgerMenu();
 
 //Fonctionnalité 3 :
 function redText(){
-  let btnEdit  = document.querySelector(".btn-outline-secondary")
+  let btnEdit  = document.querySelectorAll(".btn-outline-secondary")[0];
+  let cardEdit = document.querySelectorAll(".card-text")[0]
   btnEdit.addEventListener("click", function(){
-    document.querySelector(".card-text").style.color = "red"
+    if (cardEdit.style.color === 'red') {
+      cardEdit.style.color = 'black'
+    } else {
+      cardEdit.style.color = 'red'
+    }
   })};
  redText();
 
